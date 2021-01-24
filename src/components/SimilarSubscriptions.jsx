@@ -6,7 +6,7 @@ const Similar_Subscriptions = () => {
             <h2 className="similar-title mb-4">Similar Subscriptions</h2>
             <div className="row">
                 <div className="col-md-3">
-                    <div className="card">
+                    <div className="card card mt-1 mb-1">
                         <img className="card-img-top" src="/img/team.png" alt="Team" />
                         <div className="card-body">
                             <div className="row mb-1">
@@ -41,7 +41,7 @@ const Similar_Subscriptions = () => {
                     </div>
                 </div>
                 <div className="col-md-3">
-                    <div className="card">
+                    <div className="card card mt-1 mb-1">
                         <img className="card-img-top" src="/img/team.png" alt="Team" />
                         <div className="card-body">
                             <div className="row mb-1">
@@ -76,7 +76,7 @@ const Similar_Subscriptions = () => {
                     </div>
                 </div>
                 <div className="col-md-3">
-                    <div className="card">
+                    <div className="card card mt-1 mb-1">
                         <img className="card-img-top" src="/img/team.png" alt="Team" />
                         <div className="card-body">
                             <div className="row mb-1">
@@ -111,7 +111,7 @@ const Similar_Subscriptions = () => {
                     </div>
                 </div>
                 <div className="col-md-3">
-                    <div className="card">
+                    <div className="card card mt-1 mb-1">
                         <img className="card-img-top" src="/img/team.png" alt="Team" />
                         <div className="card-body">
                             <div className="row mb-1">

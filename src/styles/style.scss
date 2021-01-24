@@ -302,7 +302,24 @@ Header Start
     line-height: 24.18px;
     font-size: 14px;
   }
-
+  @media only screen and (max-width: 600px) {
+	.header-btn {
+	  margin: 12px auto;
+	  width: 100%;
+  }
+  .profile-view-social .social-media {
+	float: none !important;
+	text-align: center;
+	}
+	.dropup, .dropright, .dropdown, .dropleft {
+		position: relative;
+		width: 73px;
+		margin: 0 auto;
+	}
+	.footer {
+		text-align: center;
+	}
+  }
   .dropdown-toggle {
 	height: 40px;
 	padding: 6px;
@@ -497,7 +514,7 @@ flex-container-1 > flex-item {
 }
 
 flex-container-2 {
-    flex: 0 0 45%;
+    flex: 0 0 60%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -729,6 +746,7 @@ Similar Subscriptions
 		background: #FFFFFF;
 		box-shadow: 0px 1px 3px rgba(40, 40, 40, 0.2);
 		border-radius: 20px;
+		margin: 6px 0px;
 	}
 	.like {
 		position: absolute;
