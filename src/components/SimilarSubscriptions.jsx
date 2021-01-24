@@ -36,7 +36,7 @@ const Similar_Subscriptions = () => {
                                     <path fillRule="evenodd" clipRule="evenodd" d="M7.5 14.9922L1.09835 7.99219C-0.366116 6.39084 -0.366116 3.79454 1.09835 2.1932C2.56282 0.59185 4.93718 0.591849 6.40165 2.1932L7.5 3.39421L8.59835 2.1932C10.0628 0.59185 12.4372 0.591849 13.9016 2.1932C15.3661 3.79454 15.3661 6.39084 13.9017 7.99219L7.5 14.9922Z" fill="#FF484A" />
                                 </svg>
                             </span>
-                            <span className="like-txt">314</span>
+                            <span className="like-txt mt-1">314</span>
                         </span>
                     </div>
                 </div>
@@ -71,7 +71,7 @@ const Similar_Subscriptions = () => {
                                     <path fillRule="evenodd" clipRule="evenodd" d="M7.5 14.9922L1.09835 7.99219C-0.366116 6.39084 -0.366116 3.79454 1.09835 2.1932C2.56282 0.59185 4.93718 0.591849 6.40165 2.1932L7.5 3.39421L8.59835 2.1932C10.0628 0.59185 12.4372 0.591849 13.9016 2.1932C15.3661 3.79454 15.3661 6.39084 13.9017 7.99219L7.5 14.9922Z" fill="#FF484A" />
                                 </svg>
                             </span>
-                            <span className="like-txt">314</span>
+                            <span className="like-txt mt-1">314</span>
                         </span>
                     </div>
                 </div>
@@ -106,7 +106,7 @@ const Similar_Subscriptions = () => {
                                     <path fillRule="evenodd" clipRule="evenodd" d="M7.5 14.9922L1.09835 7.99219C-0.366116 6.39084 -0.366116 3.79454 1.09835 2.1932C2.56282 0.59185 4.93718 0.591849 6.40165 2.1932L7.5 3.39421L8.59835 2.1932C10.0628 0.59185 12.4372 0.591849 13.9016 2.1932C15.3661 3.79454 15.3661 6.39084 13.9017 7.99219L7.5 14.9922Z" fill="#FF484A" />
                                 </svg>
                             </span>
-                            <span className="like-txt">314</span>
+                            <span className="like-txt mt-1">314</span>
                         </span>
                     </div>
                 </div>
@@ -141,7 +141,7 @@ const Similar_Subscriptions = () => {
                                     <path fillRule="evenodd" clipRule="evenodd" d="M7.5 14.9922L1.09835 7.99219C-0.366116 6.39084 -0.366116 3.79454 1.09835 2.1932C2.56282 0.59185 4.93718 0.591849 6.40165 2.1932L7.5 3.39421L8.59835 2.1932C10.0628 0.59185 12.4372 0.591849 13.9016 2.1932C15.3661 3.79454 15.3661 6.39084 13.9017 7.99219L7.5 14.9922Z" fill="#FF484A" />
                                 </svg>
                             </span>
-                            <span className="like-txt">314</span>
+                            <span className="like-txt mt-1">314</span>
                         </span>
                     </div>
                 </div>
