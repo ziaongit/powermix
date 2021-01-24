@@ -731,6 +731,27 @@ Similar Subscriptions
 		box-shadow: 0px 1px 3px rgba(40, 40, 40, 0.2);
 		border-radius: 20px;
 	}
+	.like {
+		position: absolute;
+		right: 12px;
+		top: 12px;
+	}
+	.heart {
+		width: 31px;
+		height: 31px;
+		background: #FFFFFF;
+		border-radius: 100px;
+	}
+	.like-txt {
+		display:block;
+		font-family: 'Gilroy';
+		font-style: normal;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 16px;
+		color: #8091A7;
+		text-align: center;
+	}
 }
 .similar-title {
 	font-family: 'Gilroy';
