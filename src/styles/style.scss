@@ -1,0 +1,742 @@
+/*
+=============== 
+Fonts
+===============
+*/
+@import '../assets/fonts/gulroy.css';
+@import '../assets/fonts/munito.css';
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+	/* dark shades of primary color*/
+	--clr-primary-1: hsl(205, 86%, 17%);
+	--clr-primary-2: hsl(205, 77%, 27%);
+	--clr-primary-3: hsl(205, 72%, 37%);
+	--clr-primary-4: hsl(205, 63%, 48%);
+	/* primary/main color */
+	--clr-primary-5: hsl(205, 78%, 60%);
+	/* lighter shades of primary color */
+	--clr-primary-6: hsl(205, 89%, 70%);
+	--clr-primary-7: hsl(205, 90%, 76%);
+	--clr-primary-8: hsl(205, 86%, 81%);
+	--clr-primary-9: hsl(205, 90%, 88%);
+	--clr-primary-10: hsl(205, 100%, 96%);
+	/* darkest grey - used for headings */
+	--clr-grey-1: hsl(209, 61%, 16%);
+	--clr-grey-2: hsl(211, 39%, 23%);
+	--clr-grey-3: hsl(209, 34%, 30%);
+	--clr-grey-4: hsl(209, 28%, 39%);
+	/* grey used for paragraphs */
+	--clr-grey-5: hsl(210, 22%, 49%);
+	--clr-grey-6: hsl(209, 23%, 60%);
+	--clr-grey-7: hsl(211, 27%, 70%);
+	--clr-grey-8: hsl(210, 31%, 80%);
+	--clr-grey-9: hsl(212, 33%, 89%);
+	--clr-grey-10: hsl(210, 36%, 96%);
+	--clr-white: #fff;
+	--clr-red-dark: hsl(360, 67%, 44%);
+	--clr-red-light: hsl(360, 71%, 66%);
+	--clr-green-dark: hsl(125, 67%, 44%);
+	--clr-green-light: hsl(125, 71%, 66%);
+	--clr-black: #222;
+    --ff-primary:"Nunito";
+	--ff-secondary: "Gilroy", sans-serif;
+	--transition: all 0.3s linear;
+	--spacing: 0.1rem;
+	--radius: 0.25rem;
+	--light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+	--dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+	--max-width: 1170px;
+	--fixed-width: 620px;
+}
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: var(--ff-primary);
+	color: var(--clr-grey-1);
+	line-height: 1.5;
+	font-size: 0.875rem;
+}
+ul {
+	list-style-type: none;
+}
+a {
+	text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+	letter-spacing: var(--spacing);
+	text-transform: capitalize;
+	line-height: 1.25;
+	margin-bottom: 0.75rem;
+	font-family: 'Gilroy';;
+}
+h1 {
+	font-size: 3rem;
+}
+h2 {
+	font-size: 2rem;
+}
+h3 {
+	font-size: 1.25rem;
+}
+h4 {
+	font-size: 0.875rem;
+}
+p {
+	margin-bottom: 1.25rem;
+    font-family: var(--ff-primary);
+}
+@media screen and (min-width: 800px) {
+	h1 {
+		font-size: 4rem;
+	}
+	h2 {
+		font-size: 2.5rem;
+	}
+	h3 {
+		font-size: 1.75rem;
+	}
+	h4 {
+		font-size: 1rem;
+	}
+	body {
+		font-size: 1rem;
+	}
+	h1,
+	h2,
+	h3,
+	h4 {
+		line-height: 1;
+	}
+}
+/*  global classes */
+
+/* section */
+.section {
+	padding: 5rem 0;
+}
+
+.section-center {
+	width: 90vw;
+	margin: 0 auto;
+	max-width: 1170px;
+}
+@media screen and (min-width: 992px) {
+	.section-center {
+		width: 95vw;
+	}
+}
+main {
+	min-height: 100vh;
+	display: grid;
+	place-items: center;
+}
+
+/*
+=============== 
+Header Start
+===============
+*/
+.nav {
+	background: var(--clr-white);
+	box-shadow: var(--light-shadow);
+}
+.nav-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem;
+}
+.nav-toggle {
+	font-size: 1.5rem;
+	color: var(--clr-primary-5);
+	background: transparent;
+	border-color: transparent;
+	transition: var(--transition);
+	cursor: pointer;
+}
+.nav-toggle:hover {
+	color: var(--clr-primary-1);
+	transform: rotate(90deg);
+}
+.logo {
+	height: 40px;
+}
+.links a {
+	color: var(--clr-grey-3);
+	font-size: 1rem;
+	text-transform: capitalize;
+	letter-spacing: var(--spacing);
+	display: block;
+	padding: 0.5rem 1rem;
+	transition: var(--transition);
+}
+.links a:hover {
+	background: var(--clr-primary-8);
+	color: var(--clr-primary-5);
+	padding-left: 1.5rem;
+}
+.social-icons {
+	display: none;
+}
+.links {
+	height: 0;
+	overflow: hidden;
+	transition: var(--transition);
+}
+.show-links {
+	height: 10rem;
+}
+@media screen and (min-width: 800px) {
+	.nav-center {
+		max-width: 1170px;
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 1rem;
+	}
+	.nav-header {
+		padding: 0;
+	}
+	.nav-toggle {
+		display: none;
+	}
+	.links {
+		height: auto;
+		display: flex;
+	}
+	.links a {
+		padding: 0;
+		margin: 0 0.5rem;
+	}
+	.links a:hover {
+		padding: 0;
+		background: transparent;
+	}
+	.social-icons {
+		display: flex;
+	}
+	.social-icons a {
+		margin: 0 0.5rem;
+		color: var(--clr-primary-5);
+		transition: var(--transition);
+	}
+	.social-icons a:hover {
+		color: var(--clr-primary-7);
+	}
+}
+
+.wrapper {
+	max-width: 31.25rem;
+	margin-right: 8px;
+  }
+  
+  .searchBar {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+  }
+  .search-icon {
+	width: 32px;
+	height: 32px;
+	left: 1312px;
+	top: 33px;
+	background: #F3ADCC;
+	border: 1.30769px solid #F3ADCC;
+	box-sizing: border-box;
+	border-radius: 150px;
+  }
+  
+  #searchQueryInput {
+	width: 100%;
+    height: 52px;
+	background: #FFFFFF;
+	outline: none;
+	border: none;
+	border-radius: 1.625rem;
+	padding: 0 3.5rem 0 1.5rem;
+	font-size: 1rem;
+	box-shadow: var(--light-shadow);
+  }
+  
+  #searchQuerySubmit {
+	width: 3.5rem;
+	height: 2.8rem;
+	margin-left: -3.5rem;
+	background: none;
+	border: none;
+	outline: none;
+  }
+  
+  #searchQuerySubmit:hover {
+	cursor: pointer;
+  }
+
+  .header-btn {
+	background: #5564E7;
+    color: white;
+    border-radius: 20px;
+    padding: 7px 20px;
+    font-family: 'Gilroy';
+    font-weight: 700;
+    line-height: 24.18px;
+    font-size: 14px;
+  }
+
+  .dropdown-toggle {
+	height: 40px;
+	padding: 6px;
+    background: #ffffff;
+    border: 2.8px solid #5564E7;
+    border-radius: 30px;
+    box-sizing: border-box;
+    margin-left: 4px;
+  }
+  
+  .dropdown-toggle::after {
+	display: none;
+  }
+
+  .navbar-light .navbar-brand {
+    color: rgba(0, 0, 0, 0.9);
+    font-family: Noto sans-serif;
+    font-size: 30px;
+    line-height: 49.03px;
+    font-weight: 700;
+}
+  .navbar-light .navbar-nav .nav-link {
+	  font-size:16px;
+	  color: rgba(0, 0, 0, 0.9);
+	  font-family: 'Gilroy';
+	  font-style: normal;
+	  font-weight: 600;
+	  line-height: 24.18px;
+}
+/*
+=============== 
+Header End
+===============
+*/
+/*
+=============== 
+Description
+===============
+*/
+.description {
+p{
+	background: #FFFFFF;
+    border: 1.5px solid #CFCFCF;
+    padding: 10px;
+    border-radius: 13px;
+    color: #262626;
+    font-size: 20px;
+}
+}
+.description-title {
+	font-family: 'Gilroy';
+font-style: normal;
+font-weight: bold;
+font-size: 30px;
+line-height: 44px;
+}
+/*
+=============== 
+Description end
+===============
+*/
+/*
+=============== 
+Social Media
+===============
+*/
+.social-media {
+margin: 15px;
+a {
+	margin: 6px;
+}
+}
+.profile-view-social {
+	.social-media {
+		margin: 0;
+		float: right;
+	}
+}
+/*
+=============== 
+UXUI Designer start
+===============
+*/
+.uxui-designer {
+	.card {
+		background: #FFFFFF;
+		border: 1.5px solid #CFCFCF;
+		box-sizing: border-box;
+		box-shadow: 0px 20px 30px rgba(85, 100, 231, 0.1);
+		border-radius: 20px;
+	}
+	.card-title {
+		height: 80px;
+		background: rgba(255, 114, 53, 0.1);
+		border-radius: 20px 20px 0px 0px;
+		left: 1135px;
+		top: 385px;
+		.title-text-left {
+			position: absolute;
+			top: 20px;
+			left: 20px;
+			font-family: 'Gilroy';
+			font-style: normal;
+			font-weight: bold;
+			font-size: 30px;
+			line-height: 36px;
+			color: #0A2540;
+		}
+		.title-text-right {
+			position: absolute;
+			right:20px;
+			top: 20px;
+			font-family: 'Noto Sans';
+			font-style: normal;
+			font-weight: 600;
+			font-size: 30px;
+			line-height: 41px;
+			color: #FF7235;
+		}
+	}
+	.card-body {
+		padding:0;
+	}
+	.cart-text-list {
+		display:block;
+		font-family: 'Gilroy';
+		font-style: normal;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 24px;
+		/* identical to box height */
+		color: #262626;
+	}
+}
+/*
+=============== 
+XUI Designer
+===============
+*/
+.uiux-list {
+	text-align: left;
+	li {
+		border:none;
+		font-family: 'Gilroy';
+		font-style: normal;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 24px;
+		color: #262626;
+	}
+}
+.list-two {
+    text-align: left;
+    margin-left: 26px;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 25px;
+    color: #8091A7;
+}
+.subscription {
+	width: 261px;
+	height: 77px;
+	font-family: 'Noto Sans';
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 33px;
+	color: #FFFFFF;
+	background: #FF7235;
+	box-shadow: 0px 30px 80px rgba(255, 114, 53, 0.1);
+	border-radius: 100px;
+	border: none;
+    margin: 20px;
+}
+/*
+=============== 
+Profile View
+===============
+*/
+
+flex-container-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+
+flex-container-1 > flex-item {
+    flex: 0 0 0;
+	margin-right: 8px;
+}
+
+flex-container-2 {
+    flex: 0 0 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+flex-container-2 > flex-item {
+    flex: 0 0 22%;
+}
+.name {
+	font-family: 'Gilroy';
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 29px;
+	color: #0A2540;
+}
+.address {
+	font-family: 'Noto Sans';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 22px;
+	color: #8091A7;
+}
+.button-container  {
+	text-align: center;
+}
+.view-profile-btn {
+	width: 150px;
+	height: 49px;
+	left: 271px;
+	top: 295.99px;
+	border: 2px solid #6977EA;
+	margin: 10px;
+	box-sizing: border-box;
+	border-radius: 100px;
+	left: 298px;
+	top: 309.99px;
+	font-family: 'Gilroy';
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 22px;
+	color: #5564E7;
+	background: #ffffff;
+}
+.message-btn {
+	width: 142px;
+	height: 49px;
+	left: 451px;
+	top: 296.99px;
+	color:#ffffff;
+	background: #5564E7;
+	border: none;
+	margin: 10px;
+	border-radius: 100px;
+	font-family: 'Gilroy';
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 22px;
+	color: #FFFFFF;
+}
+
+/*
+=============== 
+Flash team start
+===============
+*/
+.flash-team {
+	.title {
+		font-family: 'Gilroy';
+		font-style: normal;
+		font-weight: bold;
+		font-size: 36px;
+		line-height: 44px;
+		color: #0A2540;
+	}
+	p {
+		font-family: 'Nunito';
+		font-style: normal;
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 200%;
+		text-align: center;
+		color: #8091A7;
+	}
+}
+.flash-title {
+	font-family: 'Gilroy';
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 29px;
+	color: #0A2540;
+	margin-top:10px;
+}
+
+/*
+=============== 
+Portfolio Slider start
+===============
+*/
+.carousel .slide {
+    background: transparent;
+    border-radius: 100px;
+}
+.carousel .thumb {
+    margin-top: 10px;
+    border-radius: 8px;
+}
+.carousel .thumb.selected, .carousel .thumb:hover {
+    border: 1px solid #fff1ea;
+}
+.tab-btn {
+	width: 120.38px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    background: #F0F3FF;
+    border-radius: 126.719px;
+    color: #5564E7;
+    padding: 4px;
+}
+/*
+=============== 
+Footer start
+===============
+*/
+.footer {
+	background: #F6F9FC;
+	.footer-title {
+		font-size: 24px;
+    font-family: 'Gilroy';
+    font-weight: 700;
+	line-height: 29.02px;
+	padding: 10px 4px;
+	}
+	.list-unstyled {
+		padding-left: 6px;
+		list-style: none;
+		font-family: 'Nunito';
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 33px;
+	}
+	.copyright {
+		font-family: 'Nunito';
+		font-size: 17px;
+		font-weight: 600;
+		line-height: 24.55px;
+		border-top: 1px solid #8091A7;
+	}
+}
+
+/*
+=============== 
+Similar Subscriptions
+===============
+*/
+
+.similar-subscriptions {
+	.card {
+		border-radius: 20px;
+	}
+	.pro-name {
+		font-family: 'Gilroy';
+		font-style: normal;
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 14px;
+		color: #8091A7;
+	}
+	.address {
+		font-family: 'Nunito';
+		font-style: normal;
+		font-weight: normal;
+		font-size: 10px;
+		line-height: 14px;
+		color: #8091A7;
+	}
+	.occupation {
+		font-family: 'Gilroy';
+		font-style: normal;
+		font-weight: 600;
+		font-size: 12px;
+		line-height: 17px;
+		color: #0A2540;
+	}
+	.prise {
+		font-family: 'Nunito';
+		font-style: normal;
+		font-weight: bold;
+		font-size: 16px;
+		line-height: 22px;
+		color: #0A2540;
+		.usd {
+			color: #FF7235;
+		}
+	}
+	.skills {
+		font-family: 'Gilroy';
+		font-style: normal;
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 14px;
+		color: #8091A7;
+	}
+	.work {
+		font-family: 'Gilroy';
+		font-style: normal;
+		font-weight: 600;
+		font-size: 12px;
+		line-height: 14px;
+		color: #8091A7;
+	}
+	.subscribe {
+		width: 94px;
+		height: 32px;
+		font-family: 'Gilroy';
+		font-style: normal;
+		font-weight: bold;
+		font-size: 10px;
+		line-height: 12px;
+		color: #5564E7;
+		border: 2px solid  #5564E7;
+		background: #FFFFFF;
+		box-shadow: 0px 1px 3px rgba(40, 40, 40, 0.2);
+		border-radius: 20px;
+	}
+}
+.similar-title {
+	font-family: 'Gilroy';
+	font-style: normal;
+	font-weight: bold;
+	font-size: 36px;
+	line-height: 44px;
+	color: #0A2540;
+}
